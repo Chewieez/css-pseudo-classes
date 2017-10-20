@@ -1,0 +1,48 @@
+ul > li {
+    display: inline;
+    list-style: none;
+}
+
+span.inline {
+    display: block;
+    border: 1px solid grey;
+    margin: 25px;
+}
+
+article.n-child section:nth-of-type(even) {
+    border: 1px solid orange;
+}
+
+ul.top :not(:last-child)::after {
+    content: ", ";
+}
+
+article.n-type section:nth-of-type(odd) {
+    color: blue;
+}
+
+article.first-of-type aside:nth-of-type(1) {
+    background-color: lime;
+} 
+
+article.first-of-type section:nth-of-type(1) {
+    background-color: purple;
+}
+
+article.three section {
+    background-color: orange;
+}
+
+article.three section:first-child {
+    background-color: goldenrod;
+}
+
+article.three section:last-child {
+    background-color: darkslategray;
+}
+
+article::before {
+    content: "Article parent element";
+    border: 1px dashed gray;
+    background-color: royalblue;
+}
