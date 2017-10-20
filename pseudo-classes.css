@@ -1,4 +1,6 @@
-ul > li {
+/* --- Styles for the first 11 steps in Psuedo-Classes exercise --- */
+
+ul.top > li {
     display: inline;
     list-style: none;
 }
@@ -43,6 +45,40 @@ article.three section:last-child {
 
 article::before {
     content: "Article parent element";
+    /* The styles below would be if I only wanted to style the newly created content that article::before places into the DOM, with a border and background-color. See comment below for what I felt like Requirement #11 states. */
+    /* border: 1px dashed gray; */
+    /* background-color: royalblue; */
+}
+
+/* I wasn't 100% sure how to add style for Requirement #11. The requirement seemed to read that each article element should get a dashed gray border and a background color of royal blue. Not just the content that is created in the above article::before selector. */
+article {
     border: 1px dashed gray;
     background-color: royalblue;
 }
+
+/* --- Styles for Event Pseudoclasses exercise --- */
+
+ul.navbar li {
+    list-style: none;
+    display: inline;
+    padding-right: .2em;
+    padding-left: .2em;
+}
+
+ul.navbar {
+    padding: 0;
+}
+
+ul.navbar a:hover {
+    color: fuchsia;
+}
+
+ul.navbar li:hover {
+    background-color: turquoise;
+}
+
+ul.navbar li:active {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
