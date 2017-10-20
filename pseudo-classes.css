@@ -1,48 +1,59 @@
 /* --- Styles for the first 11 steps in Psuedo-Classes exercise --- */
 
+/* display the unorder list with the class="top" on a single horizontal line */
 ul.top > li {
     display: inline;
     list-style: none;
 }
 
+/* Change layout of span elements from inline to block  */
 span.inline {
     display: block;
     border: 1px solid grey;
     margin: 25px;
 }
 
+/* Add a 1px orange border around every even numbered section inside of the article with the class n-child */
 article.n-child section:nth-of-type(even) {
     border: 1px solid orange;
 }
 
+/* Add a comma after each number in the unordered list with the class="top", except for the last number. */
 ul.top :not(:last-child)::after {
     content: ", ";
 }
 
+/* Change color of the text inside the article with the class="n-type" to blue */
 article.n-type section:nth-of-type(odd) {
     color: blue;
 }
 
+/* Change background color of first aside inside of the article with class="first-of-type" to lime */
 article.first-of-type aside:nth-of-type(1) {
     background-color: lime;
 } 
 
+/* Change backround color of the first section inside of the article with class="first-of-type" to purple */
 article.first-of-type section:nth-of-type(1) {
     background-color: purple;
 }
 
+/* Change background-color of the article with the class="three" to orange */
 article.three section {
     background-color: orange;
 }
 
+/* Change background-color of the first child of the article with class="three" to goldenrod, regardless of type */
 article.three section:first-child {
     background-color: goldenrod;
 }
 
+/* Change background-color of the last child of the article with class="three" to darkslategray, regardless of type */
 article.three section:last-child {
     background-color: darkslategray;
 }
 
+/* Give each article a title of "Article parent element" */
 article::before {
     content: "Article parent element";
     /* The styles below would be if I only wanted to style the newly created content that article::before places into the DOM, with a border and background-color. See comment below for what I felt like Requirement #11 states. */
@@ -51,6 +62,8 @@ article::before {
 }
 
 /* I wasn't 100% sure how to add style for Requirement #11. The requirement seemed to read that each article element should get a dashed gray border and a background color of royal blue. Not just the content that is created in the above article::before selector. */
+
+/* Give each article a dashed gray border and a background-color of royalblue */
 article {
     border: 1px dashed gray;
     background-color: royalblue;
@@ -58,6 +71,7 @@ article {
 
 /* --- Styles for Event Pseudoclasses exercise --- */
 
+/* layout navbar elements horizontally with some space between each.*/
 ul.navbar li {
     list-style: none;
     display: inline;
@@ -65,18 +79,22 @@ ul.navbar li {
     padding-left: .2em;
 }
 
+/* Remove default padding on list items in Navbar */
 ul.navbar {
     padding: 0;
 }
 
+/* Change color of link text when user hovers over link in navbar */
 ul.navbar a:hover {
     color: fuchsia;
 }
 
+/* Change background-color of element containing nav link when user hovers over the element */
 ul.navbar li:hover {
     background-color: turquoise;
 }
 
+/* Enlarge space around element containing nav link when user clicks on link in navbar.   */
 ul.navbar li:active {
     padding-left: 5px;
     padding-right: 5px;
