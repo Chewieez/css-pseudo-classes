@@ -53,21 +53,14 @@ article.three section:last-child {
     background-color: darkslategray;
 }
 
-/* Give each article a title of "Article parent element" */
+/* Give each article a title of "Article parent element" with a dashed gray border and a background-color of royalblue" */
 article::before {
     content: "Article parent element";
-    /* The styles below would be if I only wanted to style the newly created content that article::before places into the DOM, with a border and background-color. See comment below for what I felt like Requirement #11 states. */
-    /* border: 1px dashed gray; */
-    /* background-color: royalblue; */
-}
-
-/* I wasn't 100% sure how to add style for Requirement #11. The requirement seemed to read that each article element should get a dashed gray border and a background color of royal blue. Not just the content that is created in the above article::before selector. */
-
-/* Give each article a dashed gray border and a background-color of royalblue */
-article {
     border: 1px dashed gray;
     background-color: royalblue;
 }
+
+
 
 /* --- Styles for Event Pseudoclasses exercise --- */
 
